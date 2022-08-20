@@ -14,6 +14,10 @@
 		AB8159C828B11D7A00EDA067 /* CancionesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159C728B11D7A00EDA067 /* CancionesTests.swift */; };
 		AB8159D228B11D7A00EDA067 /* CancionesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159D128B11D7A00EDA067 /* CancionesUITests.swift */; };
 		AB8159D428B11D7A00EDA067 /* CancionesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159D328B11D7A00EDA067 /* CancionesUITestsLaunchTests.swift */; };
+		AB8159E228B139D800EDA067 /* AuthorizationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159E128B139D800EDA067 /* AuthorizationProvider.swift */; };
+		AB8159E528B1416400EDA067 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159E428B1416400EDA067 /* String+Extension.swift */; };
+		AB8159E728B144BA00EDA067 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159E628B144BA00EDA067 /* Array+Extension.swift */; };
+		AB8159EA28B1507A00EDA067 /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159E928B1507A00EDA067 /* RandomGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		AB8159CD28B11D7A00EDA067 /* CancionesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CancionesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8159D128B11D7A00EDA067 /* CancionesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionesUITests.swift; sourceTree = "<group>"; };
 		AB8159D328B11D7A00EDA067 /* CancionesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB8159E028B120A000EDA067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB8159E128B139D800EDA067 /* AuthorizationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationProvider.swift; sourceTree = "<group>"; };
+		AB8159E428B1416400EDA067 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		AB8159E628B144BA00EDA067 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		AB8159E928B1507A00EDA067 /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +103,14 @@
 		AB8159B528B11D7800EDA067 /* Canciones */ = {
 			isa = PBXGroup;
 			children = (
+				AB8159E828B1507100EDA067 /* Helper */,
+				AB8159E328B1413800EDA067 /* Extensions */,
+				AB8159E028B120A000EDA067 /* Info.plist */,
 				AB8159B628B11D7800EDA067 /* CancionesApp.swift */,
 				AB8159B828B11D7800EDA067 /* ContentView.swift */,
 				AB8159BA28B11D7A00EDA067 /* Assets.xcassets */,
 				AB8159BC28B11D7A00EDA067 /* Preview Content */,
+				AB8159E128B139D800EDA067 /* AuthorizationProvider.swift */,
 			);
 			path = Canciones;
 			sourceTree = "<group>";
@@ -125,6 +138,23 @@
 				AB8159D328B11D7A00EDA067 /* CancionesUITestsLaunchTests.swift */,
 			);
 			path = CancionesUITests;
+			sourceTree = "<group>";
+		};
+		AB8159E328B1413800EDA067 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB8159E428B1416400EDA067 /* String+Extension.swift */,
+				AB8159E628B144BA00EDA067 /* Array+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB8159E828B1507100EDA067 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AB8159E928B1507A00EDA067 /* RandomGenerator.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8159E528B1416400EDA067 /* String+Extension.swift in Sources */,
+				AB8159E728B144BA00EDA067 /* Array+Extension.swift in Sources */,
+				AB8159E228B139D800EDA067 /* AuthorizationProvider.swift in Sources */,
 				AB8159B928B11D7800EDA067 /* ContentView.swift in Sources */,
 				AB8159B728B11D7800EDA067 /* CancionesApp.swift in Sources */,
+				AB8159EA28B1507A00EDA067 /* RandomGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +454,7 @@
 				DEVELOPMENT_TEAM = M9S9DP25NB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Canciones/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +484,7 @@
 				DEVELOPMENT_TEAM = M9S9DP25NB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Canciones/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
