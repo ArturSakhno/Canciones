@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    let authProvider = AuthorizationProvider()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+                Task {
+                    try? await authProvider.start()
+                }
+            } label: {
+                Text("Hello")
+            }
+
         }
         .padding()
     }
