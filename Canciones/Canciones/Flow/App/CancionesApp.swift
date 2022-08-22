@@ -16,13 +16,23 @@ struct CancionesApp: App {
         WindowGroup {
             Group {
                 if appState.isLoggedIn {
-                    ContentView()
-                        .transition(.scale)
+//                    NavigationStack(path: $router.path) {
+                        ContentView()
+                            .transition(.scale)
+//                            .navigationDestination(for: Route.self) { route in
+//                                switch route {
+//                                case .playlistCategory(let categoryItem):
+//                                    Text(categoryItem.name)
+//                                }
+//
+//                            }
+//                    }
                 } else {
                     AuthorizationView()
                         .transition(.scale)
                 }
             }
+            
             .animation(.default, value: appState.isLoggedIn)
             .environmentObject(router)
             .environmentObject(appState)

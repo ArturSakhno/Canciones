@@ -22,6 +22,9 @@
 		AB6A0DCA28B3B40F00206DBD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC928B3B40F00206DBD /* ProfileViewModel.swift */; };
 		AB6A0DCC28B3B72A00206DBD /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DCB28B3B72A00206DBD /* ProfileService.swift */; };
 		AB6A0DCE28B3B83F00206DBD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DCD28B3B83F00206DBD /* Profile.swift */; };
+		AB7F0C7728B3CE5C008BF54F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F0C7628B3CE5C008BF54F /* SearchViewModel.swift */; };
+		AB7F0C7928B3CE8F008BF54F /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F0C7828B3CE8F008BF54F /* CategoriesService.swift */; };
+		AB7F0C7B28B3CF22008BF54F /* PlaylistCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F0C7A28B3CF22008BF54F /* PlaylistCategory.swift */; };
 		AB8159B728B11D7800EDA067 /* CancionesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159B628B11D7800EDA067 /* CancionesApp.swift */; };
 		AB8159BB28B11D7A00EDA067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8159BA28B11D7A00EDA067 /* Assets.xcassets */; };
 		AB8159D228B11D7A00EDA067 /* CancionesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159D128B11D7A00EDA067 /* CancionesUITests.swift */; };
@@ -75,6 +78,9 @@
 		AB6A0DC928B3B40F00206DBD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AB6A0DCB28B3B72A00206DBD /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		AB6A0DCD28B3B83F00206DBD /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		AB7F0C7628B3CE5C008BF54F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		AB7F0C7828B3CE8F008BF54F /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		AB7F0C7A28B3CF22008BF54F /* PlaylistCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCategory.swift; sourceTree = "<group>"; };
 		AB8159B328B11D7800EDA067 /* Canciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canciones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8159B628B11D7800EDA067 /* CancionesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionesApp.swift; sourceTree = "<group>"; };
 		AB8159BA28B11D7A00EDA067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 			children = (
 				AB6A0DBD28B2F47A00206DBD /* ProtectedStorageService.swift */,
 				AB6A0DCB28B3B72A00206DBD /* ProfileService.swift */,
+				AB7F0C7828B3CE8F008BF54F /* CategoriesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			children = (
 				AB6A0DC028B2F4C900206DBD /* AuthorizationToken.swift */,
 				AB6A0DCD28B3B83F00206DBD /* Profile.swift */,
+				AB7F0C7A28B3CF22008BF54F /* PlaylistCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6A0DAF28B2EF2700206DBD /* SearchView.swift */,
+				AB7F0C7628B3CE5C008BF54F /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -461,6 +470,8 @@
 				AB6A0DCC28B3B72A00206DBD /* ProfileService.swift in Sources */,
 				AB6A0DAC28B2EEF500206DBD /* ContentView.swift in Sources */,
 				AB6A0DC828B3B2C600206DBD /* HomeViewModel.swift in Sources */,
+				AB7F0C7928B3CE8F008BF54F /* CategoriesService.swift in Sources */,
+				AB7F0C7B28B3CF22008BF54F /* PlaylistCategory.swift in Sources */,
 				AB8159E728B144BA00EDA067 /* Array+Extension.swift in Sources */,
 				AB6A0DC428B39B2B00206DBD /* NotificationBanner.swift in Sources */,
 				AB9F0DC828B29DC800858825 /* AppState.swift in Sources */,
@@ -474,6 +485,7 @@
 				AB6A0DBE28B2F47A00206DBD /* ProtectedStorageService.swift in Sources */,
 				AB9F0DBB28B299AA00858825 /* Router.swift in Sources */,
 				AB6A0DCE28B3B83F00206DBD /* Profile.swift in Sources */,
+				AB7F0C7728B3CE5C008BF54F /* SearchViewModel.swift in Sources */,
 				AB6A0DB328B2F2A600206DBD /* Network.swift in Sources */,
 				AB8159F128B2577700EDA067 /* AuthorizationViewModel.swift in Sources */,
 				AB8159B728B11D7800EDA067 /* CancionesApp.swift in Sources */,

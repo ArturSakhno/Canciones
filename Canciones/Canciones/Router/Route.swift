@@ -8,4 +8,5 @@
 import Foundation
 
 enum Route: Hashable {
+    case playlistCategory(PlaylistCategoryItem)
 }
