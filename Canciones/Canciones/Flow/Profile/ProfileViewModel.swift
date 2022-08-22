@@ -19,6 +19,7 @@ final class ProfileViewModel: ObservableObject {
     
     @MainActor
     func loadProfile() {
+        guard profile == nil else { return }
         Task {
             profile = try? await profileService.loadProfile()
         }
@@ -34,9 +35,6 @@ final class ProfileViewModel: ObservableObject {
     func onLogout() async {
         guard let appState else { return }
         ProtectedStorageService.shared.removeValueForKey(StorageKeys.token.rawValue)
-        withAnimation {
-            appState.isLoggedIn = false
-        }
-        
+        appState.isLoggedIn = false
     }
 }

@@ -16,20 +16,20 @@ struct CancionesApp: App {
         WindowGroup {
             Group {
                 if appState.isLoggedIn {
-//                    NavigationStack(path: $router.path) {
-                        ContentView()
-                            .transition(.scale)
-//                            .navigationDestination(for: Route.self) { route in
-//                                switch route {
-//                                case .playlistCategory(let categoryItem):
-//                                    Text(categoryItem.name)
-//                                }
-//
-//                            }
-//                    }
+                    //                    NavigationStack(path: $router.path) {
+                    ContentView()
+                        .transition(.opacity)
+                    //                            .navigationDestination(for: Route.self) { route in
+                    //                                switch route {
+                    //                                case .playlistCategory(let categoryItem):
+                    //                                    Text(categoryItem.name)
+                    //                                }
+                    //
+                    //                            }
+                    //                    }
                 } else {
                     AuthorizationView()
-                        .transition(.scale)
+                        .transition(.opacity)
                 }
             }
             

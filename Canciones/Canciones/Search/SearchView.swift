@@ -24,9 +24,8 @@ struct SearchView: View {
                             path.append(item)
                         } label: {
                             ZStack {
-                                Rectangle()
+                                RandomGenerator.randomColor()
                                     .cornerRadius(8)
-                                    .foregroundColor(RandomGenerator.randomColor())
                                     .frame(height: 100)
                                 Text(item.name)
                                     .foregroundColor(.white)

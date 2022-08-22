@@ -21,9 +21,9 @@ struct AuthorizationView: View {
                     .frame(maxWidth: .infinity, maxHeight: 44)
                     .foregroundColor(.white)
                     .background(
-                        RoundedRectangle(cornerRadius: 12)
+                        Color.purple
+                            .cornerRadius(12)
                             .opacity(0.6)
-                            .foregroundColor(.purple)
                     )
             }
             .offset(y: viewModel.animate ? 0 : 200)
@@ -33,7 +33,11 @@ struct AuthorizationView: View {
         .padding()
         .background(
             Image.theme.authorization.background
+                .resizable()
+                .ignoresSafeArea()
+                .scaledToFill()
                 .blur(radius: 2)
+                
         )
         .onAppear {
             viewModel.setupAppState(appState)
