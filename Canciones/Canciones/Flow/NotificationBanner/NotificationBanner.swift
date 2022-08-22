@@ -26,9 +26,9 @@ struct _NotificationBanner: View {
                                 .foregroundColor(.white)
                                 .font(.callout)
                         }
+                        Spacer()
                     }
                     .padding(.horizontal)
-                    Spacer()
                 }
                 
                 .frame(maxWidth: .infinity, maxHeight: 88)

@@ -13,7 +13,6 @@ protocol AuthorizationProviderType {
     func start() async throws
 }
 
-// TODO: replace callback with appropriate throws error
 final class AuthorizationProvider: NSObject, ASWebAuthenticationPresentationContextProviding, AuthorizationProviderType {
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         ASPresentationAnchor()
@@ -49,8 +48,6 @@ final class AuthorizationProvider: NSObject, ASWebAuthenticationPresentationCont
             URLQueryItem(name: "scope", value: scope),
         ]
         
-        callback(.failure(.wrongUrl))
-        return
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "accounts.spotify.com"

@@ -35,10 +35,6 @@ final class AuthorizationViewModel: ObservableObject {
             appState.isLoggedIn = true
         } catch {
             appState.showBanner(config: NotificationBannerConfiguration(type: .error, title: "AuthError", subtitle: "AuthSubtitle"))
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                appState.showBanner(config: NotificationBannerConfiguration(type: .error, title: "11111", subtitle: "2222"))
-
-            }
             print(error)
         }
     }
