@@ -11,9 +11,19 @@ final class AppState: ObservableObject {
     @Published var isLoggedIn = false
     @Published var showBanner = false
     var notificationBannerConfiguration = NotificationBannerConfiguration.dummy
+        
+    init() {
+        let token: AuthorizationToken? = ProtectedStorageService.shared.getData(forKey: StorageKeys.token.rawValue) 
+        isLoggedIn = token != nil
+    }
     
+    @MainActor
     func showBanner(config: NotificationBannerConfiguration) {
-        notificationBannerConfiguration = config
-        showBanner = true
+        Task {
+            notificationBannerConfiguration = config
+            showBanner = true
+            try? await Task.sleep(nanoseconds: 1_000_000_000 * config.secondsDisplay)
+            showBanner = false
+        }
     }
 }

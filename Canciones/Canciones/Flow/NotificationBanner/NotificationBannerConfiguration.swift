@@ -11,6 +11,7 @@ struct NotificationBannerConfiguration {
     let type: NotificationBannerType
     let title: String
     let subtitle: String
+    var secondsDisplay: UInt64 = 2
     
     static let dummy = NotificationBannerConfiguration(type: .error, title: "Title", subtitle: "Subtitle")
 }

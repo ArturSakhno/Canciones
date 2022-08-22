@@ -15,9 +15,13 @@
 		AB6A0DB728B2F2B600206DBD /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DB628B2F2B600206DBD /* RequestError.swift */; };
 		AB6A0DBB28B2F42A00206DBD /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DBA28B2F42A00206DBD /* StorageKeys.swift */; };
 		AB6A0DBE28B2F47A00206DBD /* ProtectedStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DBD28B2F47A00206DBD /* ProtectedStorageService.swift */; };
-		AB6A0DC128B2F4C900206DBD /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC028B2F4C900206DBD /* AuthorizationResponse.swift */; };
+		AB6A0DC128B2F4C900206DBD /* AuthorizationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC028B2F4C900206DBD /* AuthorizationToken.swift */; };
 		AB6A0DC428B39B2B00206DBD /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC328B39B2B00206DBD /* NotificationBanner.swift */; };
 		AB6A0DC628B39DDA00206DBD /* NotificationBannerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC528B39DDA00206DBD /* NotificationBannerConfiguration.swift */; };
+		AB6A0DC828B3B2C600206DBD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC728B3B2C600206DBD /* HomeViewModel.swift */; };
+		AB6A0DCA28B3B40F00206DBD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DC928B3B40F00206DBD /* ProfileViewModel.swift */; };
+		AB6A0DCC28B3B72A00206DBD /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DCB28B3B72A00206DBD /* ProfileService.swift */; };
+		AB6A0DCE28B3B83F00206DBD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6A0DCD28B3B83F00206DBD /* Profile.swift */; };
 		AB8159B728B11D7800EDA067 /* CancionesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159B628B11D7800EDA067 /* CancionesApp.swift */; };
 		AB8159BB28B11D7A00EDA067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8159BA28B11D7A00EDA067 /* Assets.xcassets */; };
 		AB8159D228B11D7A00EDA067 /* CancionesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8159D128B11D7A00EDA067 /* CancionesUITests.swift */; };
@@ -64,9 +68,13 @@
 		AB6A0DB628B2F2B600206DBD /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		AB6A0DBA28B2F42A00206DBD /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		AB6A0DBD28B2F47A00206DBD /* ProtectedStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedStorageService.swift; sourceTree = "<group>"; };
-		AB6A0DC028B2F4C900206DBD /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		AB6A0DC028B2F4C900206DBD /* AuthorizationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationToken.swift; sourceTree = "<group>"; };
 		AB6A0DC328B39B2B00206DBD /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		AB6A0DC528B39DDA00206DBD /* NotificationBannerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerConfiguration.swift; sourceTree = "<group>"; };
+		AB6A0DC728B3B2C600206DBD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AB6A0DC928B3B40F00206DBD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AB6A0DCB28B3B72A00206DBD /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		AB6A0DCD28B3B83F00206DBD /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		AB8159B328B11D7800EDA067 /* Canciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canciones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8159B628B11D7800EDA067 /* CancionesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionesApp.swift; sourceTree = "<group>"; };
 		AB8159BA28B11D7A00EDA067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6A0DBD28B2F47A00206DBD /* ProtectedStorageService.swift */,
+				AB6A0DCB28B3B72A00206DBD /* ProfileService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,7 +167,8 @@
 		AB6A0DBF28B2F4BE00206DBD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AB6A0DC028B2F4C900206DBD /* AuthorizationResponse.swift */,
+				AB6A0DC028B2F4C900206DBD /* AuthorizationToken.swift */,
+				AB6A0DCD28B3B83F00206DBD /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9F0DC128B29C3700858825 /* HomeView.swift */,
+				AB6A0DC728B3B2C600206DBD /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -285,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6A0DAD28B2EF1A00206DBD /* ProfileView.swift */,
+				AB6A0DC928B3B40F00206DBD /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -446,18 +458,22 @@
 			files = (
 				AB8159E528B1416400EDA067 /* String+Extension.swift in Sources */,
 				ABDC6ED628B285B700D45A14 /* Theme.swift in Sources */,
+				AB6A0DCC28B3B72A00206DBD /* ProfileService.swift in Sources */,
 				AB6A0DAC28B2EEF500206DBD /* ContentView.swift in Sources */,
+				AB6A0DC828B3B2C600206DBD /* HomeViewModel.swift in Sources */,
 				AB8159E728B144BA00EDA067 /* Array+Extension.swift in Sources */,
 				AB6A0DC428B39B2B00206DBD /* NotificationBanner.swift in Sources */,
 				AB9F0DC828B29DC800858825 /* AppState.swift in Sources */,
 				AB9F0DBD28B299E500858825 /* Route.swift in Sources */,
 				AB8159E228B139D800EDA067 /* AuthorizationProvider.swift in Sources */,
 				AB6A0DAE28B2EF1A00206DBD /* ProfileView.swift in Sources */,
+				AB6A0DCA28B3B40F00206DBD /* ProfileViewModel.swift in Sources */,
 				AB9F0DC228B29C3700858825 /* HomeView.swift in Sources */,
 				AB6A0DBB28B2F42A00206DBD /* StorageKeys.swift in Sources */,
-				AB6A0DC128B2F4C900206DBD /* AuthorizationResponse.swift in Sources */,
+				AB6A0DC128B2F4C900206DBD /* AuthorizationToken.swift in Sources */,
 				AB6A0DBE28B2F47A00206DBD /* ProtectedStorageService.swift in Sources */,
 				AB9F0DBB28B299AA00858825 /* Router.swift in Sources */,
+				AB6A0DCE28B3B83F00206DBD /* Profile.swift in Sources */,
 				AB6A0DB328B2F2A600206DBD /* Network.swift in Sources */,
 				AB8159F128B2577700EDA067 /* AuthorizationViewModel.swift in Sources */,
 				AB8159B728B11D7800EDA067 /* CancionesApp.swift in Sources */,

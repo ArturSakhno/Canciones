@@ -13,6 +13,7 @@ enum RequestError: Error {
     case noResponse
     case unexpectedStatusCode
     case unknown
+    case cantRecieveToken
     
     var customMessage: String {
         switch self {
@@ -24,6 +25,8 @@ enum RequestError: Error {
             return "No Response"
         case .unexpectedStatusCode:
             return "Unexpected Status Code"
+        case .cantRecieveToken:
+            return ""
         default:
             return "Unknown error"
         }

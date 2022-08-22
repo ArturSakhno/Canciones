@@ -18,7 +18,6 @@ struct CancionesApp: App {
                 if appState.isLoggedIn {
                     ContentView()
                         .transition(.scale)
-                    
                 } else {
                     AuthorizationView()
                         .transition(.scale)

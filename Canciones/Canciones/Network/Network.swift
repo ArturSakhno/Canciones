@@ -18,26 +18,34 @@ final class Network: NetworkType {
         var mutableRequest = request
         do {
             if let token {
-                mutableRequest.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+                mutableRequest.addValue("Bearer \(token.accessToken)", forHTTPHeaderField: "Authorization")
             } else {
                 token = ProtectedStorageService.shared.getData(forKey: StorageKeys.token.rawValue)
+                guard let token else { return .failure(.noResponse) }
+                mutableRequest.addValue("Bearer \(token.accessToken)", forHTTPHeaderField: "Authorization")
             }
             let (data, response) = try await URLSession.shared.data(for: mutableRequest, delegate: nil)
             guard let response = response as? HTTPURLResponse else {
+                print("NETWORK NO RESPONSE")
                 return .failure(.noResponse)
             }
             switch response.statusCode {
             case 200...299:
                 do {
-                    let decodedResponse = try JSONDecoder().decode(responseModel, from: data)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let decodedResponse = try decoder.decode(responseModel, from: data)
                     return .success(decodedResponse)
                 } catch {
+                    print("NETWORK DECODE \(error)")
                     return .failure(.decode)
                 }
             default:
+                print("NETWORK UNEXPECTED STATUS CODE")
                 return .failure(.unexpectedStatusCode)
             }
         } catch {
+            print("NETWORK UNKNOWN")
             return .failure(.unknown)
         }
     }
