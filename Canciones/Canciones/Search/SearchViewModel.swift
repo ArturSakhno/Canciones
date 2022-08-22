@@ -14,6 +14,7 @@ final class SearchViewModel: ObservableObject {
     
     @MainActor
     func loadCategories() {
+        guard categories.isEmpty else { return }
         Task {
             categories = (try? await service.loadCategories()) ?? []
         }
