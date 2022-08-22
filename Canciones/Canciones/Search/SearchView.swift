@@ -8,8 +8,46 @@
 import SwiftUI
 
 struct SearchView: View {
+    @StateObject var viewModel = SearchViewModel()
+    
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    @State var path: [PlaylistCategoryItem] = []
     var body: some View {
-        Text("Search")
+        NavigationStack(path: $path) {
+            List {
+                LazyVGrid(columns: columns) {
+                    ForEach(viewModel.categories) { item in
+                        Button {
+                            path.append(item)
+                        } label: {
+                            ZStack {
+                                Rectangle()
+                                    .cornerRadius(8)
+                                    .foregroundColor(RandomGenerator.randomColor())
+                                    .frame(height: 100)
+                                Text(item.name)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .buttonStyle(BorderlessButtonStyle())
+                    }
+                }
+                .listRowSeparator(.hidden)
+            }
+            
+            .listStyle(.plain)
+            .navigationDestination(for: PlaylistCategoryItem.self, destination: {
+                Text($0.name)
+            })
+            .searchable(text: $viewModel.inputQuery)
+            .navigationTitle("Search")
+            .onAppear {
+                viewModel.loadCategories()
+            }
+        }
     }
 }
 
